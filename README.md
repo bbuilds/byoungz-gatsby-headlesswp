@@ -1,7 +1,3 @@
-<h1 align="center">
-  Byoungz Gatsby Theme
-</h1>
-
 # BYOUNGZ Gastby and WP Wordpress theme.
 
 A custom built Gatsby theme leveraging WP as backend. Also built in is a custom IG feed using the Basic Display API and feeding into gatsby node. 
