@@ -1,0 +1,411 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --nav-height: 4.0625rem;
+}
+
+html,
+body {
+  font-family: "Noto Sans", sans-serif;
+  @apply relative overflow-x-hidden;
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+.font-grenze {
+  font-family: "Grenze", serif;
+}
+
+.font-noto {
+  font-family: "Noto Sans", sans-serif;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: "Grenze", serif;
+  @apply mb-2 leading-normal;
+}
+
+h1,
+.h2 {
+  @apply text-5xl;
+}
+
+h2,
+.h2 {
+  @apply text-3xl;
+}
+
+h3 {
+  @apply text-2xl;
+}
+
+h4 {
+  @apply text-xl;
+}
+
+h5 {
+  @apply text-lg;
+}
+
+h6 {
+  @apply text-base;
+}
+
+a {
+  @apply text-primary no-underline border-b border-transparent font-semibold transition-all ease-in-out duration-300;
+}
+
+.decor-link::after {
+  content: " ";
+  height: 0.1875rem;
+  width: 2rem;
+  bottom: -5px;
+  left: 0;
+
+  @apply bg-primary absolute transition-all ease-in-out duration-300;
+}
+
+.decor-link:hover::after {
+  width: 100%;
+}
+
+.font-noto {
+  font-family: "Noto Sans", sans-serif;
+}
+
+.font-grenze {
+  font-family: "Grenze", serif;
+}
+
+.animated {
+  @apply transition-all ease-in-out duration-300;
+}
+
+.bg-black-gradient {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    144deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.5688) 100%
+  );
+}
+
+/*
+  |-----------------------------------------------------------------------------
+  | Main Header and Navigation Styles
+  |-----------------------------------------------------------------------------
+  |
+*/
+
+.logo {
+  max-width: 7.5em;
+}
+
+.nav-primary {
+  top: var(--nav-height);
+  left: 0;
+  height: calc(100vh - var(--nav-height));
+  padding-left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.nav-primary.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-primary.is-open > * {
+  transform: translateY(0);
+}
+
+.nav-primary > * {
+  transition: 0.2s;
+  transform: translateY(10px);
+}
+
+.nav-primary.nav-is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-primary.nav-is-open > * {
+  transform: translateY(0);
+}
+
+.nav-primary-list {
+  padding-left: 0;
+}
+
+.nav-primary-list > li {
+  flex: 0 0 50%;
+  list-style: none;
+}
+
+.nav-primary-list .icon-animate {
+  stroke: white;
+}
+
+.nav-primary-list .icon-link {
+  @apply text-white;
+}
+
+.nav-primary-list .icon-link:hover.adventures {
+  @apply text-blue;
+}
+
+.nav-primary-list .icon-link:hover.shadow-work {
+  @apply text-orange;
+}
+
+.nav-primary-list .icon-link:hover.blog {
+  @apply text-light-green;
+}
+
+.nav-primary-list .icon-link:hover.contact {
+  @apply text-dark-green;
+}
+
+.mobile-action svg {
+  width: auto;
+  height: auto;
+  max-height: 3.125rem;
+  max-width: 3.125rem;
+}
+
+.mobile-action.nav-is-open .icon-burger {
+  display: none;
+}
+
+.mobile-action.nav-is-open .icon-close {
+  display: block;
+}
+
+.top-of-site-link {
+  bottom: 1.2rem;
+  right: 1.5rem;
+}
+
+/*
+  |-----------------------------------------------------------------------------
+  | Home Page Styles
+  |-----------------------------------------------------------------------------
+  |
+*/
+
+.featured__post {
+  min-height: 14.5rem;
+}
+
+.featured__post::before {
+  content: " ";
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+
+  @apply absolute w-full h-full z-300;
+}
+
+.featured__post img {
+  top: 0;
+  left: 0;
+}
+
+.featured__post:hover .featured__marker {
+  opacity: 1;
+}
+
+.featured__primary {
+  flex-basis: 100%;
+}
+
+.featured__secondary {
+  flex-basis: 100%;
+}
+
+/* Meet Byoungz // About */
+
+.byoungz-meet__cutout {
+  max-height: 40.625rem;
+}
+
+/*
+  |-----------------------------------------------------------------------------
+  | Post / Article Styles
+  |-----------------------------------------------------------------------------
+  |
+*/
+
+.article h4,
+.article h5,
+.article h6 {
+  @apply uppercase;
+}
+
+.entry-content
+  > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright) {
+  @apply mx-auto max-w-lg;
+}
+
+.entry-content > * {
+  @apply my-8;
+}
+
+.entry-content > *:first-child {
+  @apply mt-0;
+}
+
+.entry-content > *:last-child {
+  @apply mb-0;
+}
+
+.entry-content h1,
+.entry-content h2,
+.entry-content h3 {
+  @apply mb-4;
+}
+
+.entry-content p,
+.entry-content li {
+  margin-bottom: 0.9375rem;
+}
+
+.entry-content ul,
+ol {
+  @apply pl-4;
+}
+
+.entry-content li {
+  list-style-type: disc;
+}
+
+.article p,
+.article ul,
+.article ol {
+  @apply leading-normal;
+}
+
+/*
+  |-----------------------------------------------------------------------------
+  | Small Styles
+  |-----------------------------------------------------------------------------
+  |
+*/
+
+@media (min-width: 576px) {
+}
+
+/*
+  |-----------------------------------------------------------------------------
+  | Tablet Styles
+  |-----------------------------------------------------------------------------
+  |
+*/
+
+@media (min-width: 768px) {
+  :root {
+    --nav-height: 7.375rem;
+  }
+
+  .logo {
+    max-width: 6.5em;
+  }
+
+  .nav-primary {
+    top: 0;
+  }
+  .nav-primary > * {
+    transform: translateY(0);
+  }
+  .nav-primary-list > li {
+    flex: 1;
+  }
+  .nav-primary-list svg[class^="icon-"] {
+    width: 2rem;
+    height: 2rem;
+  }
+  .entry-content h2 {
+    @apply text-5xl;
+  }
+  .entry-content h3 {
+    @apply text-4xl;
+  }
+  .entry-content h4 {
+    @apply text-3xl;
+  }
+  .entry-content h5 {
+    @apply text-3xl;
+  }
+
+  .entry-content ul,
+  ol {
+    @apply pl-6;
+  }
+}
+
+/*
+  |-----------------------------------------------------------------------------
+  | Large Styles
+  |-----------------------------------------------------------------------------
+  |
+*/
+
+@media (min-width: 1024px) {
+  .nav-primary {
+    flex-basis: 80%;
+  }
+
+  .featured__post--secondary {
+    height: 50%;
+  }
+
+  .featured__primary {
+    flex-basis: 50%;
+    height: calc(100vh - var(--nav-height));
+  }
+
+  .featured__secondary {
+    flex-basis: 50%;
+    height: calc(100vh - var(--nav-height));
+  }
+
+  .article p,
+  .article ul,
+  .article ol {
+    @apply mt-4 text-lg;
+  }
+
+  body {
+    font-size: 120%;
+  }
+}
+
+/*
+  |-----------------------------------------------------------------------------
+  | X-Large Styles
+  |-----------------------------------------------------------------------------
+  |
+*/
+
+@media (min-width: 1280px) {
+  .featured__primary {
+    flex-basis: 65%;
+  }
+
+  .featured__secondary {
+    flex-basis: 35%;
+  }
+}
