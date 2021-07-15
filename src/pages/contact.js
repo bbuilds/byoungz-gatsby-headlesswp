@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Seo from "../components/seo"

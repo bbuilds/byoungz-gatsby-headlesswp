@@ -41,6 +41,7 @@ const Blog = ({ data }) => {
         const postCategories = data.categories
         return postCategories.some(cat => cat.slug === value)
       }
+      return null
     })
 
     if (!result || result.length === 0) {
