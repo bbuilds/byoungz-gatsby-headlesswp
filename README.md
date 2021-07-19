@@ -2,9 +2,9 @@
 
 A custom built Gatsby theme leveraging WP as backend. Also built in is a custom IG feed using the Basic Display API and feeding into gatsby node. 
 
-**DEMO URL**
+**LIVE URL**
 
-[https://byoungz-gatsby-demo.netlify.app/](https://byoungz-gatsby-demo.netlify.app/)
+[https://byoungz.com/](https://byoungz.com/)
 
 
 ## 🔨 Dev Notes
