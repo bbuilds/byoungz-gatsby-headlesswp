@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://byoungz.com/sitemap/sitemap-index.xml
+Sitemap: https://byoungz.com/sitemap/sitemap-0.xml

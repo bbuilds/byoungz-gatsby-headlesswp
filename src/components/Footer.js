@@ -52,7 +52,7 @@ const Footer = () => {
                     <Link to="/privacy-policy">Privacy Policy</Link>
                   </li>
                   <li>
-                    <a href="/sitemap/sitemap-index.xml">Sitemap</a>
+                    <a href="/sitemap/sitemap-0.xml">Sitemap</a>
                   </li>
                 </ul>
               </nav>
