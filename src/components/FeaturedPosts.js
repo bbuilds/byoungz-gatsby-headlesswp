@@ -106,7 +106,7 @@ const FeaturedPosts = () => {
           </Link>
         </article>
       </div>
-      <div className="featured__secondary flex flex-col">
+      <div className="featured__secondary hidden md:flex md:flex-col">
         {seondaryFeaturedPosts.map(post => {
           const secondaryFeaturedPostImage = getImage(
             post.featuredImage.node.localFile
