@@ -12,7 +12,7 @@ const Blog = ({ data }) => {
 
   const allCategories = data.allWpCategory.nodes
 
-  const [allData, setAllData] = useState(posts)
+  const [allData] = useState(posts)
   const [filteredData, setFilteredData] = useState(allData)
 
   const [subtitle, setSubtitle] = useState("")

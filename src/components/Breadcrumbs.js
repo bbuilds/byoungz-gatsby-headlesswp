@@ -15,7 +15,11 @@ const Breadcrumbs = ({ postSEO }) => {
                     key={crumb.url}
                     className="flex items-center text-grey-light text-xs"
                   >
-                    <Link to={crumb.url}>{crumb.text}</Link>
+                    <Link to={crumb.url}>
+                      <span
+                        dangerouslySetInnerHTML={{ __html: `${crumb.text}` }}
+                      ></span>
+                    </Link>
                     {index + 1 !== postSEO.breadcrumbs.length ? (
                       <RightIcon className="fill-current w-3 h-3 mx-3" />
                     ) : (

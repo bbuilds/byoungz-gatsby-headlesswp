@@ -34,7 +34,7 @@ function About() {
         <div className="w-full md:w-1/2 px-8" data-aos="fade-right">
           <hr className="dashed border-t-3 border-dashed border-white mb-4 w-24 mx-0" />
           <div className="entry-content">
-            <h2 class="flex flex-col uppercase md:text-2xl mb-4 md:mb-8">
+            <h2 className="flex flex-col uppercase md:text-2xl mb-4 md:mb-8">
               WHO IS
             </h2>
             <LogoText className="w-72 alignleft" />

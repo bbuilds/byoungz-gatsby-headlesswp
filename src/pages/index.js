@@ -11,7 +11,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <Seo post={data.wpPage} />
-      <h1 class="sr-only">BYOUNGZ Digital Nomad and Shadow Work Blog</h1>
+      <h1 className="sr-only">BYOUNGZ Digital Nomad and Shadow Work Blog</h1>
       <FeaturedPosts />
       <About />
       <RecentPosts />
