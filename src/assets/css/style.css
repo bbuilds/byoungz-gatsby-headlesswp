@@ -288,8 +288,20 @@ ol {
   @apply pl-4;
 }
 
-.entry-content li {
+.entry-content ul li {
   list-style-type: disc;
+}
+
+.entry-content ol li {
+  list-style-type: decimal;
+}
+
+.entry-content ol li ol li {
+  list-style-type: lower-roman;
+}
+
+.entry-content ol li ol li ol li {
+  list-style-type: lower-alpha;
 }
 
 .article p,

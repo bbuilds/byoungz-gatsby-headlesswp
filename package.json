@@ -9,7 +9,7 @@
     "@fontsource/noto-sans": "4.5.0",
     "aos": "^2.3.4",
     "autoprefixer": "10.3.2",
-    "gatsby": "^3.9.1",
+    "gatsby": "^3.14.2",
     "gatsby-plugin-google-tagmanager": "^3.9.0",
     "gatsby-plugin-image": "1.12.0",
     "gatsby-plugin-manifest": "3.12.0",
