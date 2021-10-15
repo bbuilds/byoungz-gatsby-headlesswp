@@ -310,6 +310,16 @@ ol {
   @apply leading-normal;
 }
 
+.wp-block-quote {
+  background: linear-gradient(to right, #f89938 3px, transparent 2px) 0 100%,
+    linear-gradient(to left, #f89938 3px, transparent 2px) 100% 0,
+    linear-gradient(to bottom, #f89938 3px, transparent 2px) 100% 0,
+    linear-gradient(to top, #f89938 3px, transparent 2px) 0 100%;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  @apply text-center p-3 w-full m-1;
+}
+
 /*
   |-----------------------------------------------------------------------------
   | Small Styles
@@ -402,6 +412,11 @@ ol {
 
   body {
     font-size: 120%;
+  }
+
+  .wp-block-quote {
+    font-size: 100%;
+    @apply my-5;
   }
 }
 
