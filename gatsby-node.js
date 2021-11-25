@@ -11,7 +11,7 @@ exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
   createTypes(`
       type ByoungzInstaNode implements Node {
-        thumbnail: File @link(from: "thumbnail___NODE")
+        thumbnail: File @link(from: "fields.localFile")
       }
 
       type Thumbnail {
@@ -23,7 +23,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 //https://www.gatsbyjs.com/docs/how-to/images-and-media/preprocessing-external-images/
 exports.onCreateNode = async ({
   node,
-  actions: { createNode },
+  actions: { createNode, createNodeField },
   store,
   cache,
   createNodeId,
@@ -40,7 +40,7 @@ exports.onCreateNode = async ({
     })
 
     if (fileNode) {
-      node.thumbnail___NODE = fileNode.id
+      createNodeField({ node, name: "localFile", value: fileNode.id })
     }
   }
 }

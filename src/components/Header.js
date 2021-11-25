@@ -37,7 +37,7 @@ const Header = () => {
   return (
     <header
       id="site-header"
-      className="site-header flex flex-no-wrap items-center z-800 bg-black border-b border-grey-darker w-full"
+      className="relative site-header flex flex-no-wrap items-center z-800 bg-black border-b border-grey-darker w-full"
     >
       <div className="logo md:h-full">
         <Link

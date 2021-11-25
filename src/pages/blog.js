@@ -60,7 +60,7 @@ const Blog = ({ data }) => {
     <Layout>
       <Seo post={data.wpPage} />
       <Banner title={`Latest Blog Posts`} subtitle={subtitle} />
-      <div className="container mx-auto px-4 lg:px-10 pb-20 pt-10">
+      <div className="container mx-auto px-4 lg:px-10 pb-20 pt-10 relative">
         <div className="filter-posts mb-10">
           <label
             htmlFor="search-input"

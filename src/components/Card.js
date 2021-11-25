@@ -18,7 +18,7 @@ function Card({
     <article
       data-aos="fade-up"
       data-aos-delay={delay}
-      className="thumbnail rounded overflow-hidden bg-dark-blue h-full"
+      className="thumbnail rounded overflow-hidden bg-dark-blue h-full relative"
     >
       <Link
         to={`/${slug}`}

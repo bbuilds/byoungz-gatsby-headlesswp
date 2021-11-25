@@ -43,19 +43,21 @@ const InstagramFeed = () => {
         </div>
       </div>
       <div className="flex flex-wrap md:flex-nowrap justify-center">
-        {instaPhotos.map((photo, index) => (
-          <a
-            href={`${photo.permalink}`}
-            className="block m-1"
-            target="_blank"
-            rel="noopener noreferrer"
-            key={photo.id}
-            data-aos="fade-right"
-            data-aos-delay={`${index}00`}
-          >
-            <GatsbyImage image={photo.image} alt={photo.caption} />
-          </a>
-        ))}
+        {instaPhotos.map((photo, index) => {
+          return (
+            <a
+              href={`${photo.permalink}`}
+              className="block m-1"
+              target="_blank"
+              rel="noopener noreferrer"
+              key={photo.id}
+              data-aos="fade-right"
+              data-aos-delay={`${index}00`}
+            >
+              <GatsbyImage image={photo.image} alt={photo.caption} />
+            </a>
+          )
+        })}
       </div>
       <div className="text-center my-8">
         <a

@@ -24,6 +24,9 @@ const Banner = ({ title, subtitle }) => {
             },
             enable: false,
           },
+          fullScreen: {
+            enable: false,
+          },
           fpsLimit: 60,
           infection: {
             cure: false,
