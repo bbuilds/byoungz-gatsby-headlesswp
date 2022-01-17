@@ -6,6 +6,11 @@
   --nav-height: 4.0625rem;
 }
 
+/** SR flickering  https://scrollrevealjs.org/guide/user-experience.html **/
+html.sr .load-hidden {
+  visibility: hidden;
+}
+
 html,
 body {
   font-family: "Noto Sans", sans-serif;

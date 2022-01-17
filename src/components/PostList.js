@@ -34,11 +34,11 @@ const PostList = props => {
   useEffect(() => {
     const isMore = list.length < props.posts.length
     setHasMore(isMore)
-  }, [list, props.posts]) // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [list, props.posts])
 
   useEffect(() => {
     setList([...props.posts.slice(0, displayAmount)])
-  }, [props.posts, displayAmount]) // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [props.posts, displayAmount])
 
   return (
     <>

@@ -4,23 +4,27 @@ import ScrollTopIcon from "../assets/images/svg/scroll-top.svg"
 
 const ScrollToTopLink = () => {
   const [isVisible, setIsVisible] = useState(false)
+  const [isMounted, setIsMounted] = useState(true)
+
+  const toggleVisibility = () => {
+    if (isMounted) {
+      if (window.pageYOffset > 300) {
+        setIsVisible(true)
+      } else {
+        setIsVisible(false)
+      }
+    }
+  }
 
   useEffect(() => {
-    let mounted = true
     if (typeof window !== `undefined`) {
-      const toggleVisibility = () => {
-        if (mounted) {
-          if (window.pageYOffset > 300) {
-            setIsVisible(true)
-          } else {
-            setIsVisible(false)
-          }
-        }
-      }
       window.addEventListener("scroll", toggleVisibility)
     }
-    return () => (mounted = false)
-  }, [])
+    return () => {
+      setIsMounted(false)
+      window.removeEventListener("scroll", toggleVisibility)
+    }
+  })
 
   return (
     <>

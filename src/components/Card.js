@@ -1,7 +1,8 @@
-import React from "react"
+import React, { useEffect, useRef } from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
 import { Link } from "gatsby"
+import sr, { srConfig } from "@utils/sr"
 
 function Card({
   slug,
@@ -14,11 +15,24 @@ function Card({
   tags,
   delay,
 }) {
+  const revealCard = useRef(null)
+
+  if (delay >= 900) {
+    delay = 0
+  }
+
+  useEffect(() => {
+    sr.reveal(revealCard.current, srConfig({ origin: "left", delay }, "20px"))
+
+    return () => {
+      sr.destroy()
+    }
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
+
   return (
     <article
-      data-aos="fade-up"
-      data-aos-delay={delay}
-      className="thumbnail rounded overflow-hidden bg-dark-blue h-full relative"
+      className="thumbnail rounded overflow-hidden bg-dark-blue h-full relative load-hidden"
+      ref={revealCard}
     >
       <Link
         to={`/${slug}`}

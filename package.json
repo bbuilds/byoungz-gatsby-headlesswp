@@ -7,7 +7,6 @@
   "dependencies": {
     "@fontsource/grenze": "^4.5.0",
     "@fontsource/noto-sans": "^4.5.1",
-    "aos": "^3.0.0-beta.6",
     "gatsby": "^4.2.0",
     "gatsby-plugin-google-tagmanager": "^4.2.0",
     "gatsby-plugin-image": "^2.2.0",
@@ -25,7 +24,8 @@
     "react": "^17.0.2",
     "react-helmet": "^6.1.0",
     "react-share": "^4.4.0",
-    "react-tsparticles": "^1.37.4"
+    "scrollreveal": "^4.0.9",
+    "tsparticles": "^1.39.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.0",
