@@ -35,14 +35,14 @@ const usePosts = () => {
   `)
 
   return data.allWpPost.nodes.map(post => ({
-    title: post.title,
-    slug: post.slug,
-    date: post.date,
-    image: post.featuredImage.node.localFile,
-    altText: post.featuredImage.node.altText,
-    excerpt: post.excerpt,
-    categories: post.categories.nodes,
-    tags: post.tags.nodes,
+    title: post?.title,
+    slug: post?.slug,
+    date: post?.date,
+    image: post?.featuredImage.node.localFile,
+    altText: post?.featuredImage.node.altText,
+    excerpt: post?.excerpt,
+    categories: post?.categories.nodes,
+    tags: post?.tags.nodes,
   }))
 }
 

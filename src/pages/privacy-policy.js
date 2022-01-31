@@ -2,11 +2,14 @@ import React from "react"
 import { graphql } from "gatsby"
 import parse from "html-react-parser"
 import Layout from "../components/Layout"
+import Seo from "../components/seo"
+
 const Contact = ({ data }) => {
   const post = data.wpPage
 
   return (
     <Layout>
+      <Seo post={post} />
       <article className="w-full px-8 max-w-lg mx-auto pt-10 pb-20 bg-dark-blue my-20 rounded">
         <header>
           <h1 className="mb-6">{post.title}</h1>
